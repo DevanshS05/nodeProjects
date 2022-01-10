@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Feedback form tutorial">
+        <meta name="author" content="Devansh Singh">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedback</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="bg-slate-900">
+
+            <div class="bg-gray-900  mt-[25px] sm:mt-[150px] ml-auto mr-auto max-w-sm p-8 shadow-md shadow-gray-400 rounded-md text-white text-center">
+                <h3 class="text-2xl p-4 bg-teal-600 text-white font-bold rounded-md mb-2">FEEDBACK FORM</h3>
+                <form action="../" method="post">
+                    <label for="name" class="p-1 rounded-lg bg-purple-700">Name:</label><br>
+                    <input type="text" id="name" name="name" class="w-72 text-black mt-2 mb-2 focus:bg-teal-100"><br>
+
+                    <label for="email" class="p-1 rounded-lg bg-purple-700">E-Mail:</label><br>
+                    <input type="text" id="email" name="email" class="w-72 text-black mt-2 mb-2 focus:bg-teal-100"><br>
+
+                    <label for="message" class="p-1 rounded-lg bg-purple-700">Your Message:</label><br>
+                    <textarea type="text" id="message" name="message" class="w-72 h-48 text-black mt-2 mb-2 focus:bg-teal-100"></textarea>
+                    <br>
+
+                    <!-- Need to implement feature using javascript which checks if the checkbox has been checked 
+                    and then only forwards the post request-->
+                    <!--
+                    <input type="checkbox" id="t&c" name="t&c" value="checked" class="checked:bg-lime-600">
+                     <label for="t&c" >I have read the <a href="./tnc.html" class="underline text-teal-100">terms and conditions</a></label> -->
+
+                    <button type="submit" class="p-2 bg-lime-700 text-white hover:bg-lime-600">Submit</button>
+                </form>
+            </div>
+
+    </body>
+</html>

@@ -1,5 +1,6 @@
 const express = require('express')
 const connectDB = require('./db/connect.js')
+const model = require('./models/task.js')
 const app = express()
 const tasks = require('./routes/tasks.js')
 require('dotenv').config()
@@ -9,7 +10,11 @@ app.use("/api",tasks)
 
 
 app.get('/',(req,res)=>{
-    res.status(200).end("Hello World")
+    model.create({name:"Devansh",completed:true})
+    .then(()=>{
+        res.status(200).end("Hello World")
+    })
+    
 })
 
 app.post('/',(req,res)=>{
@@ -19,7 +24,7 @@ app.post('/',(req,res)=>{
 
 const start = async()=>{
     try{
-        await connectDB(process.env.MONGO_URI)
+        await connectDB(process.env.MONGO_URL)
         app.listen(5000,()=>{console.log("Server started")})
     } catch(error){
         console.log(error)
